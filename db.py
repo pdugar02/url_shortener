@@ -19,5 +19,4 @@ def init_db():
 def get_db() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_NAME)
     conn.row_factory=sqlite3.Row
-
     return conn

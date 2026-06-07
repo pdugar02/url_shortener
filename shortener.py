@@ -15,6 +15,7 @@ def generate_code() -> str:
     return "".join(random.choices(ALPHABET, k=6))
 
 def shorten(long_url: str, expires_at = None):
+    validate_url(long_url)
     code = generate_code()
     row = get_link(code)
     retries=1
